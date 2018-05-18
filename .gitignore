@@ -1,0 +1,41 @@
+# =============== #
+# Unity generated #
+# =============== #
+MCTS-Visualisation/[Tt]emp/
+MCTS-Visualisation/[Oo]bj/
+MCTS-Visualisation/[Bb]uild
+MCTS-Visualisation/[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+ 
+# ============================================= #
+# Visual Studio / MonoDevelop / Rider generated #
+# ============================================= #
+[Ee]xported[Oo]bj/
+.vs/
+*.userprefs
+*.pidb
+*.suo
+*.user
+*.unityproj
+*.booproj
+.idea*/
+MCTS-Visualisation/*.csproj
+MCTS-Visualisation/*.sln
+*/[Bb]in/
+*/[Oo]bj/
+*/[Bb]in/
+*/[Oo]bj/
+packages
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+*.TMP
