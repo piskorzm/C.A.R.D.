@@ -12,6 +12,10 @@ public class Deck {
         Shuffle();
     }
 
+    /// <summary>
+    /// Draw the top card and removes it from the deck.
+    /// </summary>
+    /// <returns>Card drawn.</returns>
     public Card Draw()
     {
         Card toDraw = _cards[0];
@@ -19,6 +23,9 @@ public class Deck {
         return toDraw;
     }
 
+    /// <summary>
+    /// Shuffles the deck.
+    /// </summary>
     public void Shuffle()
     {
         _cards.Shuffle();

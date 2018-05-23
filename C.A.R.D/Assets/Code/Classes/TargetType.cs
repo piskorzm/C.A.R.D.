@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Specifies target type used by effects
+/// Specifies target type used by effects.
 /// </summary>
 public enum TargetType {
 
