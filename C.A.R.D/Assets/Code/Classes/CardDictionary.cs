@@ -38,8 +38,8 @@ public class CardDictionary {
         SpellCard bigRock = new SpellCard("Big Rock", "It's a BIG rock!", 2, "BigRock.png", new Effect(TargetType.TARGET, 3));
         _allCards.Add(bigRock.Name, bigRock);
 
-        SpellCard moteRunner = new SpellCard("Moterunner", "Gives cancer to your opponent", 10, "Moterunner.png", new Effect(TargetType.TARGET, 100));
-        _allCards.Add(moteRunner.Name, moteRunner);
+        SpellCard moterunner = new SpellCard("Moterunner", "Gives cancer to your opponent", 10, "Moterunner.png", new Effect(TargetType.TARGET, 100));
+        _allCards.Add(moterunner.Name, moterunner);
 
         //Minions
         MinionCard spikeyMikey = new MinionCard("Spikey Mikey", "Watch out, he is spikey", 5, "SpikeyMikey.png", 11, 1);
