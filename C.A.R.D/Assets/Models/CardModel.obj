@@ -1,6 +1,6 @@
 # Blender v2.79 (sub 0) OBJ File: 'Card.blend'
 # www.blender.org
-mtllib Card.mtl
+mtllib CardModel.mtl
 o CardImage_Cube.001
 v -0.135097 -0.848193 1.351410
 v -0.000000 -0.848193 1.365882

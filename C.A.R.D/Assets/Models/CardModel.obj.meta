@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: 51e3c0ef6b7d0254d9c4754c2945c4af
+guid: 06254fbdad3e5704eabd1639c99c1a93
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2100000: Material.005
-    2100002: None
+    100000: //RootNode
+    100002: default
+    400000: //RootNode
+    400002: default
+    2100000: Material
+    2100002: Material_cardTex.png
+    2100004: defaultMat
     2300000: default
     3300000: default
     4300000: default
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
