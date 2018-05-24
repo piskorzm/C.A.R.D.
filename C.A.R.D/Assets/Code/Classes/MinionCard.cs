@@ -3,7 +3,7 @@
     public int Health { get; private set; }
     public int Damage { get; private set; }
 
-	public MinionCard(string name, string desc, int cost, int health, int damage) : base(name, desc, cost)
+	public MinionCard(string name, string desc, int cost, string imagePath, int health, int damage) : base(name, desc, cost, imagePath)
     {
         Health = health;
         Damage = damage;

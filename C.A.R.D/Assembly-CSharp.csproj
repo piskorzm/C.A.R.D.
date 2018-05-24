@@ -59,7 +59,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Classes\AllCards.cs" />
     <Compile Include="Assets\Code\Classes\Card.cs" />
     <Compile Include="Assets\Code\Classes\CardDictionary.cs" />
     <Compile Include="Assets\Code\Classes\Deck.cs" />

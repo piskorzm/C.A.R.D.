@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class CardDictionary {
 
@@ -21,29 +22,36 @@ public class CardDictionary {
         GenerateCards();
     }
 
+    public string[] CardNames
+    {
+        get { return _allCards.Keys.ToArray(); }
+    }
+
     private void GenerateCards()
     {
-        SpellCard smallRock = new SpellCard(AllCards.SmallRock, "It's a small rock!", 0, new Effect(TargetType.TARGET, 1));
-        _allCards.Add(AllCards.SmallRock, smallRock);
+        // TODO - MAKE IMAGES FOR ALL THESE CARDS
 
-        SpellCard bigRock = new SpellCard(AllCards.BigRock, "It's a BIG rock!", 2, new Effect(TargetType.TARGET, 3));
-        _allCards.Add(AllCards.BigRock, bigRock);
+        //Spells
+        SpellCard smallRock = new SpellCard("Small Rock", "It's a small rock!", 0, "SmallRock.png", new Effect(TargetType.TARGET, 1));
+        _allCards.Add(smallRock.Name, smallRock);
 
-        SpellCard moteRunner = new SpellCard(AllCards.MoteRunner, "Gives cancer to your opponent", 10, new Effect(TargetType.TARGET, 100));
-        _allCards.Add(AllCards.MoteRunner, moteRunner);
+        SpellCard bigRock = new SpellCard("Big Rock", "It's a BIG rock!", 2, "BigRock.png", new Effect(TargetType.TARGET, 3));
+        _allCards.Add(bigRock.Name, bigRock);
 
+        SpellCard moteRunner = new SpellCard("Moterunner", "Gives cancer to your opponent", 10, "Moterunner.png", new Effect(TargetType.TARGET, 100));
+        _allCards.Add(moteRunner.Name, moteRunner);
 
-        MinionCard spikeyMikey = new MinionCard(AllCards.SpikeyMikey, "Watch out, he is spikey", 5, 11, 1);
-        _allCards.Add(AllCards.SpikeyMikey, spikeyMikey);
+        //Minions
+        MinionCard spikeyMikey = new MinionCard("Spikey Mikey", "Watch out, he is spikey", 5, "SpikeyMikey.png", 11, 1);
+        _allCards.Add(spikeyMikey.Name, spikeyMikey);
 
-        MinionCard fano = new MinionCard(AllCards.Fano, "Fano is just not very good", 10, 0, 1);
-        _allCards.Add(AllCards.Fano, fano);
+        MinionCard fano = new MinionCard("Fano", "Fano is just not very good", 10, "Fano.png", 0, 1);
+        _allCards.Add(fano.Name, fano);
 
-        //TODO add "HAHAHA, it's so easy" on play
-        MinionCard drPlump = new MinionCard(AllCards.DrPlump, "Destroys opponets moral status", 4, 6, 4);
-        _allCards.Add(AllCards.DrPlump, drPlump);
+        MinionCard drPlump = new MinionCard("Dr.Plump", "Destroys opponets moral status", 4, "DrPlump.png", 6, 4);
+        _allCards.Add(drPlump.Name, drPlump);
 
-        MinionCard angryGoose = new MinionCard(AllCards.AngryGoose, "Beter start running now!", 3, 4, 3);
-        _allCards.Add(AllCards.AngryGoose, angryGoose);
+        MinionCard angryGoose = new MinionCard("Angry Goose", "Beter start running now!", 3, "AngryGoose.png", 4, 3);
+        _allCards.Add(angryGoose.Name, angryGoose);
     }
 }
