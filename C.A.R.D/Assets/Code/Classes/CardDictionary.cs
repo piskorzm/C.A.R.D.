@@ -30,7 +30,7 @@ public class CardDictionary {
         _allCards.Add(AllCards.BigRock, bigRock);
 
         SpellCard moteRunner = new SpellCard(AllCards.MoteRunner, "Gives cancer to your opponent", 10, new Effect(TargetType.TARGET, 100));
-        _allCards.Add(AllCards.BigRock, moteRunner);
+        _allCards.Add(AllCards.MoteRunner, moteRunner);
 
 
         MinionCard spikeyMikey = new MinionCard(AllCards.SpikeyMikey, "Watch out, he is spikey", 5, 11, 1);
