@@ -8,6 +8,10 @@ public class CardObject : MonoBehaviour {
 	public Card card;
 
 	public TextMeshPro NameText;
+    public TextMeshPro DescriptionText;
+    public TextMeshPro CostText;
+	public TextMeshPro HealthText;
+	public TextMeshPro AttackText;
 
     public const int IMAGE_INDEX = 0;
     public const int CARDBACK_INDEX = 1;
@@ -33,6 +37,19 @@ public class CardObject : MonoBehaviour {
 
 		//Set card text
 		NameText.text = card.Name;
+        DescriptionText.text = card.Description;
+        CostText.text = card.Cost.ToString();
+
+        if(card.GetType() == typeof(MinionCard))
+        {
+            AttackText.text = ((MinionCard)card).Attack.ToString();
+            HealthText.text = ((MinionCard)card).Health.ToString();
+        }
+        else
+        {
+            AttackText.text = "";
+            HealthText.text = "";
+        }
 	}
 
 	private Color GetRarityColor(Card c)
