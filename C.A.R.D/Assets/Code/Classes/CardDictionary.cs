@@ -30,6 +30,7 @@ public class CardDictionary {
 
     private void GenerateCards()
     {
+		
         // TODO - MAKE IMAGES FOR ALL THESE CARDS
 
         //Spells

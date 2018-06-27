@@ -25,8 +25,8 @@ sysinfo.txt
 *.unityproj
 *.booproj
 .idea*/
-MCTS-Visualisation/*.csproj
-MCTS-Visualisation/*.sln
+C.A.R.D/*.csproj
+C.A.R.D/*.sln
 */[Bb]in/
 */[Oo]bj/
 */[Bb]in/
