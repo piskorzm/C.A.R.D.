@@ -2,7 +2,7 @@
 	"spellCards" : [
 	{
 		"name" : "Small Rock",
-		"rarity" : "Legendary",
+		"rarity" : "Common",
 		"description" : "It's a small rock",
 		"cost" : 0,
 		"path" : "SmallRock",
@@ -12,6 +12,70 @@
 				"damage": 1
 			}
 		]
-	}],
-	"minionCards" : []
+	},
+	{
+		"name" : "Big Rock",
+		"rarity" : "Rare",
+		"description" : "It's a BIG rock",
+		"cost" : 2,
+		"path" : "BigRock",
+		"effects" : [
+			{
+				"targetType" : "Target",
+				"damage": 3
+			}
+		]
+	},
+	{
+		"name" : "Moterunner",
+		"rarity" : "Legendary",
+		"description" : "Gives cancer to your opponent",
+		"cost" : 10,
+		"path" : "Moterunner",
+		"effects" : [
+			{
+				"targetType" : "Target",
+				"damage": 100
+			}
+		]
+	}
+	],
+	"minionCards" : [
+	{
+		"name" : "Spikey Mikey",
+		"rarity" : "Rare",
+		"description" : "Watch out, he is spikey",
+		"cost" : 5,
+		"path" : "SpikeyMikey",
+		"attack" : 11,
+		"health" : 1
+	},
+	{
+		"name" : "Fano",
+		"rarity" : "Common",
+		"description" : "Fano is just not very good",
+		"cost" : 10,
+		"path" : "Fano",
+		"attack" : 0,
+		"health" : 1
+	},
+	{
+		"name" : "Dr.Plump",
+		"rarity" : "Legendary",
+		"description" : "Destroys opponets moral status",
+		"cost" : 4,
+		"path" : "DrPlump",
+		"attack" : 6,
+		"health" : 4
+	},
+	{
+		"name" : "Angry Goose",
+		"rarity" : "Epic",
+		"description" : "Beter start running now!",
+		"cost" : 3,
+		"path" : "AngryGoose",
+		"attack" : 4,
+		"health" : 3
+	}
+	]
 }

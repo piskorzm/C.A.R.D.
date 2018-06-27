@@ -64,6 +64,7 @@
     <Compile Include="Assets\Code\Classes\Deck.cs" />
     <Compile Include="Assets\Code\Classes\Effect.cs" />
     <Compile Include="Assets\Code\Classes\GameBoard.cs" />
+    <Compile Include="Assets\Code\Classes\MiniJSON.cs" />
     <Compile Include="Assets\Code\Classes\MinionCard.cs" />
     <Compile Include="Assets\Code\Classes\Player.cs" />
     <Compile Include="Assets\Code\Classes\Rarity.cs" />

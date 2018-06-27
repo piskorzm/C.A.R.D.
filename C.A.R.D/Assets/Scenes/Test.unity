@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -441,7 +441,7 @@ RectTransform:
   m_LocalScale: {x: 0.07919229, y: 0.0791923, z: 0.0791923}
   m_Children: []
   m_Father: {fileID: 1248440841}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -639,7 +639,7 @@ RectTransform:
   m_LocalScale: {x: 0.07919229, y: 0.0791923, z: 0.0791923}
   m_Children: []
   m_Father: {fileID: 1248440841}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -908,10 +908,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1450845556}
-  - {fileID: 1099961919}
-  - {fileID: 1026712501}
   - {fileID: 1952243427}
   - {fileID: 1979849796}
+  - {fileID: 1099961919}
+  - {fileID: 1026712501}
   - {fileID: 323491126}
   - {fileID: 1929159051}
   m_Father: {fileID: 0}
@@ -929,6 +929,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameText: {fileID: 1450845557}
+  DescriptionText: {fileID: 1952243428}
+  CostText: {fileID: 1979849797}
+  HealthText: {fileID: 1099961920}
+  AttackText: {fileID: 1026712502}
 --- !u!1 &1450845555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1235,7 @@ RectTransform:
   m_LocalScale: {x: 0.07919229, y: 0.0791923, z: 0.0791923}
   m_Children: []
   m_Father: {fileID: 1248440841}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1429,7 +1433,7 @@ RectTransform:
   m_LocalScale: {x: 0.07919, y: 0.07919, z: 0.07919}
   m_Children: []
   m_Father: {fileID: 1248440841}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
