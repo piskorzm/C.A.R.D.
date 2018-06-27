@@ -13,9 +13,15 @@ public class CardObject : MonoBehaviour {
     public const int CARDBACK_INDEX = 1;
 
 	void Start () {
-		//TEMP - Assign Card
-		card = new SpellCard("Small Rock", Rarity.LEGENDARY, "It's a small rock!", 0, "SmallRock", new Effect(TargetType.TARGET, 1));
+		//TEMP - Load from dictionary later
+		InitialiseCard(new SpellCard("Small Rock", Rarity.LEGENDARY, "It's a small rock!", 0, "SmallRock", new Effect(TargetType.TARGET, 1)));
+	}
 
+	void InitialiseCard(Card c)
+	{
+		//Set card
+		card = c;
+		
 		//Assign card art
 		Material imageMaterial = new Material(Shader.Find("Standard"));
 		imageMaterial.mainTexture = (Texture2D)Resources.Load("CardImages/" + card.ImagePath);
