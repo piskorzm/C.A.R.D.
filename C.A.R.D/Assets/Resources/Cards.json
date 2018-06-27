@@ -1,0 +1,17 @@
+{
+	"spellCards" : [
+	{
+		"name" : "Small Rock",
+		"rarity" : "Legendary",
+		"description" : "It's a small rock",
+		"cost" : 0,
+		"path" : "SmallRock",
+		"effects" : [
+			{
+				"targetType" : "Target",
+				"damage": 1
+			}
+		]
+	}],
+	"minionCards" : []
+}
