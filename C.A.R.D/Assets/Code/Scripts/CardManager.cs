@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-	private static CardManager _controller;
+	public static CardManager Controller;
 	private static Dictionary<int, Card> _allCards;
 
 	void Awake()
 	{
 		//Check if singleton reference already exists
-		if (_controller != null)
+		if (Controller != null)
 		{
 			throw new Exception("Can only have one instance of the CardDictionary singleton class");
 		}
 
 		//Assign singleton reference
-		_controller = this;
+		Controller = this;
 
 		//Generate cards from the json data
 		LoadAllCards();

@@ -16,12 +16,12 @@ public class CardObject : MonoBehaviour {
     public const int IMAGE_INDEX = 0;
     public const int CARDBACK_INDEX = 1;
 
-	void Start () {
-		//TEMP - Load from dictionary later
-		InitialiseCard(new SpellCard(1, "Small Rock", Rarity.LEGENDARY, "It's a small rock!", 0, "SmallRock", new Effect(TargetType.TARGET, 1)));
-	}
+	//void Start () {
+	//	//TEMP - Load from dictionary later
+	//	InitialiseCard(new SpellCard(1, "Small Rock", Rarity.LEGENDARY, "It's a small rock!", 0, "SmallRock", new Effect(TargetType.TARGET, 1)));
+	//}
 
-	void InitialiseCard(Card c)
+	public void InitialiseCard(Card c)
 	{
 		//Set card
 		card = c;
