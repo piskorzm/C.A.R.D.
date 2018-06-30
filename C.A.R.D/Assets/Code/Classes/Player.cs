@@ -15,7 +15,7 @@ public class Player {
     private List<Card> _hand;
 
     /// <summary>
-    /// Player class constructor. Draws starting cards to _hand
+    /// Player class constructor. Draws starting cards to _hand.
     /// </summary>
     /// <param name="id">Player ID</param>
     /// <param name="name">Player name</param>
