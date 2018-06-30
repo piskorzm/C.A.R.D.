@@ -5,7 +5,7 @@ using System.Collections;
 
 public class SpellCardTest {
 
-    [Test]
+	[Test]
 	public void CreateSpellCardTestOneEffect()
 	{
 		//Create individual components of a spell card
