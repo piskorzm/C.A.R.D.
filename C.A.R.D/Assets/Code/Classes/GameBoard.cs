@@ -7,5 +7,7 @@
     {
         Player1 = p1;
         Player2 = p2;
+		Player1.SetBoard(this);
+		Player2.SetBoard(this);
     }
 }

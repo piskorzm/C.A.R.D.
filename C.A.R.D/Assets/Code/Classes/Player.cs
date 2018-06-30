@@ -13,6 +13,7 @@ public class Player {
 
     private Deck _deck;
     private List<Card> _hand;
+	private GameBoard _gameBoard;
 
     /// <summary>
     /// Player class constructor. Draws starting cards to _hand.
@@ -38,4 +39,14 @@ public class Player {
             _hand.Add(_deck.Draw());
         }
     }
+
+	public void SetBoard(GameBoard b)
+	{
+		_gameBoard = b;
+	}
+
+	private void PlayCard(Card card)
+	{
+
+	}
 }
