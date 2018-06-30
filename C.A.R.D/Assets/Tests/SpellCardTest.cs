@@ -20,7 +20,7 @@ public class SpellCardTest {
 		SpellCard testCard = new SpellCard(name, rarity, description, cost, imagePath, effect);
 
 		//Ensure that the spell card was created correctly
-		Assert.AreEqual (name, testCard.Name);
+		Assert.AreEqual(name, testCard.Name);
 		Assert.AreEqual(rarity, testCard.CardRarity);
 		Assert.AreEqual(description, testCard.Description);
 		Assert.AreEqual(cost, testCard.Cost);
