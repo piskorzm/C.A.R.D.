@@ -42,8 +42,7 @@ public class CardManager : MonoBehaviour
 	{
 		//Read card JSON data and generate a list of cards from it
 		TextAsset cardDataRaw = Resources.Load<TextAsset>("Cards");
-		List<Card> generatedCards = JSONReader.GenerateCardsFromJSON(cardDataRaw.text);
-		
+		List<Card> generatedCards = JSONReader.GenerateCardsFromJSON(cardDataRaw.text);		
 
 		//Read the generated cards into the allCards dictionary
 		foreach(Card c in generatedCards)

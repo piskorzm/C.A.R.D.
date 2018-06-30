@@ -60,8 +60,8 @@ public static class JSONReader {
 			//Extract description
 			string description = (string)currentCardData["description"];
 
-			//Extract cost
-			int cost = (int)currentCardData["cost"];
+			//Extract cost, MiniJSON treats ints as longs, hence the double cast
+			int cost = (int)((long)currentCardData["cost"]);
 
 			//Extract image path
 			string imagePath = (string)currentCardData["path"];
