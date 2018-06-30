@@ -9,6 +9,7 @@ public class MinionCardTest {
     public void CreateMinionCardTest()
     {
         //Create individual components of a minion card
+        int id = 1;
         string name = "Ghost";
         Rarity rarity = Rarity.RARE;
         string description = "Is spooky";
@@ -18,7 +19,7 @@ public class MinionCardTest {
         int attack = 3;
 
         //Create a minion card
-        MinionCard testCard = new MinionCard(name, rarity, description, cost, imagePath, health, attack);
+        MinionCard testCard = new MinionCard(id, name, rarity, description, cost, imagePath, health, attack);
 
         //Ensure that the spell card was created correctly
         Assert.AreEqual(name, testCard.Name);

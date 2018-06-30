@@ -18,7 +18,7 @@ public class CardObject : MonoBehaviour {
 
 	void Start () {
 		//TEMP - Load from dictionary later
-		InitialiseCard(new SpellCard("Small Rock", Rarity.LEGENDARY, "It's a small rock!", 0, "SmallRock", new Effect(TargetType.TARGET, 1)));
+		InitialiseCard(new SpellCard(1, "Small Rock", Rarity.LEGENDARY, "It's a small rock!", 0, "SmallRock", new Effect(TargetType.TARGET, 1)));
 	}
 
 	void InitialiseCard(Card c)
