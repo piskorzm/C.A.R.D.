@@ -1,5 +1,4 @@
-﻿using MiniJSON;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,7 +6,7 @@ using UnityEngine;
 public class CardManager : MonoBehaviour
 {
 	private static CardManager _controller;
-	private static Dictionary<string, Card> _allCards;
+	private static Dictionary<int, Card> _allCards;
 
 	void Awake()
 	{
@@ -28,17 +27,17 @@ public class CardManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// An array of all card names
+	/// An array of all card ids
 	/// </summary>
-	public string[] CardNames
+	public int[] CardIds
 	{
 		get { return _allCards.Keys.ToArray(); }
 	}
 
-	/// <summary>
-	/// Parses the cards json data and generates card objects from it
-	/// </summary>
-	private void LoadAllCards()
+    /// <summary>
+    /// Parses the cards json data and generates card objects from it
+    /// </summary>
+    private void LoadAllCards()
 	{
 		//Read card JSON data and generate a list of cards from it
 		TextAsset cardDataRaw = Resources.Load<TextAsset>("Cards");
@@ -47,7 +46,7 @@ public class CardManager : MonoBehaviour
 		//Read the generated cards into the allCards dictionary
 		foreach(Card c in generatedCards)
 		{
-			_allCards.Add(c.Name, c);
+			_allCards.Add(c.Id, c);
 		}
 	}
 }

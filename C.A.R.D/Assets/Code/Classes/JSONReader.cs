@@ -31,6 +31,7 @@ public static class JSONReader {
 			Dictionary<string, object> currentCardData = (Dictionary<string, object>)card;
 
             //Set individual components of the card
+            int id = ExtractId(currentCardData);
             string name = ExtractName(currentCardData);
             Rarity rarity = ExtractRarity(currentCardData);
             string description = ExtractDescription(currentCardData);
@@ -39,7 +40,7 @@ public static class JSONReader {
             List<Effect> effects = ExtractEffects(currentCardData);
 
 			//Create a new spellcard from the parsed json data
-			SpellCard newCard = new SpellCard(name, rarity, description, cost, imagePath, effects);
+			SpellCard newCard = new SpellCard(id, name, rarity, description, cost, imagePath, effects);
 
 			//Add the spell card to the dictionary of all cards
 			generatedCards.Add(newCard);
@@ -51,6 +52,7 @@ public static class JSONReader {
             Dictionary<string, object> currentCardData = (Dictionary<string, object>)card;
 
             //Set individual components of the card
+            int id = ExtractId(currentCardData);
             string name = ExtractName(currentCardData);
             Rarity rarity = ExtractRarity(currentCardData);
             string description = ExtractDescription(currentCardData);
@@ -60,7 +62,7 @@ public static class JSONReader {
             int attack = ExtractAttack(currentCardData);
 
             //Create a new spellcard from the parsed json data
-            MinionCard newCard = new MinionCard(name, rarity, description, cost, imagePath, health, attack);
+            MinionCard newCard = new MinionCard(id, name, rarity, description, cost, imagePath, health, attack);
 
             //Add the spell card to the dictionary of all cards
             generatedCards.Add(newCard);
@@ -69,6 +71,11 @@ public static class JSONReader {
         //Return the list of generated cards
         return generatedCards;
 	}
+
+    private static int ExtractId(Dictionary<string, object> cardData)
+    {
+        return (int)((long)cardData["id"]);
+    }
 
     private static string ExtractName(Dictionary<string, object> cardData)
     {

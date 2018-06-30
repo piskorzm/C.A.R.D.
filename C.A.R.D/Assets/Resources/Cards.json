@@ -1,6 +1,7 @@
 {
 	"spellCards" : [
 	{
+		"id" : 0,
 		"name" : "Small Rock",
 		"rarity" : "Common",
 		"description" : "It's a small rock",
@@ -14,6 +15,7 @@
 		]
 	},
 	{
+		"id" : 1,
 		"name" : "Big Rock",
 		"rarity" : "Rare",
 		"description" : "It's a BIG rock",
@@ -27,6 +29,7 @@
 		]
 	},
 	{
+		"id" : 2,
 		"name" : "Moterunner",
 		"rarity" : "Legendary",
 		"description" : "Gives cancer to your opponent",
@@ -42,6 +45,7 @@
 	],
 	"minionCards" : [
 	{
+		"id" : 3,
 		"name" : "Spikey Mikey",
 		"rarity" : "Rare",
 		"description" : "Watch out, he is spikey",
@@ -51,6 +55,7 @@
 		"health" : 1
 	},
 	{
+		"id" : 4,
 		"name" : "Fano",
 		"rarity" : "Common",
 		"description" : "Fano is just not very good",
@@ -60,6 +65,8 @@
 		"health" : 1
 	},
 	{
+	
+		"id" : 5,
 		"name" : "Dr.Plump",
 		"rarity" : "Legendary",
 		"description" : "Destroys opponets moral status",
@@ -69,6 +76,8 @@
 		"health" : 4
 	},
 	{
+	
+		"id" : 6,
 		"name" : "Angry Goose",
 		"rarity" : "Epic",
 		"description" : "Beter start running now!",

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class JSONReaderTest {
 
-	private const string OneSpellAndMinionCardJSON = "{\"spellCards\": [{\"name\": \"Small Rock\",\"rarity\": \"Common\",\"description\": \"It's a small rock\",\"cost\": 0,\"path\": \"SmallRock\",\"effects\": [	{\"targetType\": \"Target\",\"damage\": 1}]}]," +
-        "\"minionCards\":[{\"name\": \"Spikey Mikey\",\"rarity\": \"Rare\",\"description\": \"Watch out, he is spikey\",\"cost\": 5,\"path\": \"SpikeyMikey\",\"attack\": 11,\"health\": 1]}";
+	private const string OneSpellAndMinionCardJSON = "{\"spellCards\": [{\"id\": 0,\"name\": \"Small Rock\",\"rarity\": \"Common\",\"description\": \"It's a small rock\",\"cost\": 0,\"path\": \"SmallRock\",\"effects\": [	{\"targetType\": \"Target\",\"damage\": 1}]}]," +
+        "\"minionCards\":[{\"id\": 1,\"name\": \"Spikey Mikey\",\"rarity\": \"Rare\",\"description\": \"Watch out, he is spikey\",\"cost\": 5,\"path\": \"SpikeyMikey\",\"attack\": 11,\"health\": 1]}";
 
 	[Test]
 	public void ReadOneSpellCardJSON()
