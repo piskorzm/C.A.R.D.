@@ -18,9 +18,16 @@ public class Deck {
     /// <returns>Card drawn</returns>
     public Card Draw()
     {
-        Card toDraw = _cards[0];
-        _cards.RemoveAt(0);
-        return toDraw;
+        if (_cards.Count != 0)
+        {
+            Card toDraw = _cards[0];
+            _cards.RemoveAt(0);
+            return toDraw;
+        }
+        else
+        {
+            return null;
+        }       
     }
 
     /// <summary>
@@ -29,5 +36,18 @@ public class Deck {
     public void Shuffle()
     {
         _cards.Shuffle();
+    }
+
+    public override bool Equals(object obj)
+    {
+        //TODO!!!!!!!!!!!!!!!
+        if(obj.GetType() != typeof(Deck))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }

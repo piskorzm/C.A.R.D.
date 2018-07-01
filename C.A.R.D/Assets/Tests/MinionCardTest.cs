@@ -22,6 +22,7 @@ public class MinionCardTest {
         MinionCard testCard = new MinionCard(id, name, rarity, description, cost, imagePath, health, attack);
 
         //Ensure that the spell card was created correctly
+        Assert.AreEqual(id, testCard.Id);
         Assert.AreEqual(name, testCard.Name);
         Assert.AreEqual(rarity, testCard.CardRarity);
         Assert.AreEqual(description, testCard.Description);

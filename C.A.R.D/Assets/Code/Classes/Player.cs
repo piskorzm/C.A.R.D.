@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Player : Entity
 {
-	public static int STARTING_CARD_AMOUNT;
+	public const int STARTING_CARD_AMOUNT = 5; 
 
-	public int ID { get; private set; }
+	public int Id { get; private set; }
 	public string Name { get; private set; }
 
-	private Deck _deck;
-	private List<Card> _hand;
-	private Field OwnField;
-	private Field OpponentsField;
+	public Deck Deck;
+	public List<Card> Hand;
+	public Field OwnField;
+	public Field OpponentsField;
 
 	/// <summary>
 	/// Player class constructor. Draws starting cards to <see cref="_hand"/>
@@ -23,18 +23,22 @@ public class Player : Entity
 	/// <param name="deck">Deck to use</param>
 	public Player(int id, string name, int health, Deck deck) : base(health, health, 0)
 	{
-		ID = id;
+		Id = id;
 		Name = name;
 
-		_deck = deck;
+		Deck = deck;
 
 		//Initialise hand
-		_hand = new List<Card>();
+		Hand = new List<Card>();
 
 		//Draw starting cards
 		for (int i = 0; i < STARTING_CARD_AMOUNT; i++)
 		{
-			_hand.Add(_deck.Draw());
+            Card cardToDraw = Deck.Draw();
+            if (cardToDraw != null)
+            {
+                Hand.Add(Deck.Draw());
+            }
 		}
 	}
 
@@ -49,7 +53,7 @@ public class Player : Entity
 		OpponentsField = opponents;
 	}
 
-	private void PlayCard(Card card)
+	public void PlayCard(Card card)
 	{
 		if (card.GetType() == typeof(MinionCard))
 		{
@@ -60,6 +64,6 @@ public class Player : Entity
 
 		}
 
-		_hand.Remove(card);
+		Hand.Remove(card);
 	}
 }
