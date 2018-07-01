@@ -1,28 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class Minion
+public class Minion : Entity
 {
     public MinionCard Card;
-    public int MaxHealth { get; private set; }
-    public int CurrentHealth { get; private set; }
-	public int Attack { get; private set; }
 
-	public Minion (MinionCard card)
+	public Minion(MinionCard card) : base(card.Health, card.Health, card.Attack)
     {
         Card = card;
-        MaxHealth = card.Health;
-        CurrentHealth = card.Health;
-        Attack = card.Attack;
     }
 
-    public void AttackMinion(Minion targetMinion)
+    public void AttackEntity(Entity target)
     {
-        targetMinion.CurrentHealth -= Attack;
-    }
-
-    public void AttackPlayer(Player targetPlayer)
-    {
-		targetPlayer.TakeDamage(Attack);
+		target.TakeDamage(Attack);
     }
 }
