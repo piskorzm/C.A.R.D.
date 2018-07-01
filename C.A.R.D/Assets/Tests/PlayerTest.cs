@@ -11,25 +11,31 @@ public class PlayerTest {
     private static SpellCard spellTestCard = new SpellCard(2, "Curse", Rarity.RARE, "Does a very nice curse", 1, "curse", new Effect(TargetType.TARGET, 3));
     private static List<Card> cards = new List<Card> { minionTestCard, spellTestCard };
 
-    //Create fields to be used for testing
-    private static Field ownField = new Field();
-    private static Field opponentsField = new Field();
-
     //Declare a Player instance to be used for testing
     private static Player player;
+
+	//Player fields to be initialised with
+	private int id = 1;
+	private string name = "The Destroyer";
+	private int health = 100;
+	private Deck deck = new Deck(cards);
+
+	[SetUp]
+	public void SetupTest()
+	{
+		//Create individual components of a player
+		int id = 1;
+		string name = "The Destroyer";
+		int health = 100;
+		Deck deck = new Deck(cards);
+
+		//Create a player
+		player = new Player(id, name, health, deck);
+	}
 
     [Test]
     public void CreatePlayerTest()
     {
-        //Create individual components of a player
-        int id = 1;
-        string name = "The Destroyer";
-        int health = 100;
-        Deck deck = new Deck(cards);
-
-        //Create a player
-        player = new Player(id, name, health, deck);
-
         //Ensure that the player was created correctly
         Assert.AreEqual(id, player.Id);
         Assert.AreEqual(name, player.Name);
@@ -40,12 +46,11 @@ public class PlayerTest {
         Assert.AreEqual(2, player.Hand.Count);
     }
 
-
     [Test]
     public void SetFieldsTest()
     {
         //Set the fields for the player
-        player.SetFields(ownField, opponentsField);
+        //player.SetFields(ownField, opponentsField);
         
 
         //TODO check if fields have been set correctly (private)
