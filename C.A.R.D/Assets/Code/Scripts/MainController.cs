@@ -6,6 +6,8 @@ public class MainController : MonoBehaviour {
 
 	public GameObject CardHolder;
 
+	public CardObject SelectedCard;
+
 	void Start () {
 		//Destroy all active cards
 		for(int i = 0; i < CardHolder.transform.childCount; i++)
@@ -28,6 +30,42 @@ public class MainController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.P))
 		{
 			Start();
+		}
+
+		Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+
+		//Emit a ray from the camera using the mouse position
+		if(Physics.Raycast(screenRay, out hit))
+		{
+			//Attempt to get the CardObject componenet of the hit object, if there is one
+			CardObject hitCard = hit.transform.GetComponent<CardObject>();
+
+			//Check if the ray is hitting a CardObject
+			if(hitCard != null)
+			{
+				//Reset old selected card if it is a different card
+				if (SelectedCard != null && SelectedCard != hitCard)
+				{
+					iTween.MoveTo(SelectedCard.gameObject, SelectedCard.OriginPosition, 0.5f);
+					iTween.ScaleTo(SelectedCard.gameObject, SelectedCard.OriginScale, 0.5f);
+				}
+
+				//Select the new card
+				SelectedCard = hitCard;
+				iTween.MoveTo(SelectedCard.gameObject, SelectedCard.OriginPosition + new Vector3(0, 5, 0), 0.5f);
+				iTween.ScaleTo(SelectedCard.gameObject, SelectedCard.OriginScale * 2, 0.5f);
+			}			
+		}
+		else
+		{
+			//Reset old selected card if there is one
+			if (SelectedCard != null)
+			{
+				iTween.MoveTo(SelectedCard.gameObject, SelectedCard.OriginPosition, 0.5f);
+				iTween.ScaleTo(SelectedCard.gameObject, SelectedCard.OriginScale, 0.5f);
+				SelectedCard = null;
+			}
 		}
 	}
 }
