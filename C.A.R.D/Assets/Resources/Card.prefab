@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 33657054181768732}
   - component: {fileID: 23664671646915876}
   - component: {fileID: 114052146547692214}
+  - component: {fileID: 65324447950028542}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -540,6 +541,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789122215407842}
   m_Mesh: {fileID: 0}
+--- !u!65 &65324447950028542
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104294896028590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.22765303, z: 3}
+  m_Center: {x: 0, y: -0.8774265, z: 0.5}
 --- !u!114 &114052146547692214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1203,7 +1216,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.669, y: -0.754}
-  m_SizeDelta: {x: 2.0302, y: 2.5189}
+  m_SizeDelta: {x: 5, y: 2.5189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224502866421201268
 RectTransform:
@@ -1221,7 +1234,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.668, y: -0.754}
-  m_SizeDelta: {x: 2.0302, y: 2.5189}
+  m_SizeDelta: {x: 5, y: 2.5189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224562021318099304
 RectTransform:
@@ -1239,5 +1252,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -0.754}
-  m_SizeDelta: {x: 2.0302, y: 2.5189}
+  m_SizeDelta: {x: 5, y: 2.5189}
   m_Pivot: {x: 0.5, y: 0.5}
