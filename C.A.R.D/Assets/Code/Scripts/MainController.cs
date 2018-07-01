@@ -16,7 +16,7 @@ public class MainController : MonoBehaviour {
 		//Repopulate them
 		for(int i = 0; i < 5; i++)
 		{
-			CardObject newCard = Instantiate(Resources.Load<GameObject>("Card"), new Vector3(-10 + (i * 5), 0, 0), Quaternion.identity).GetComponent<CardObject>();
+			CardObject newCard = Instantiate(Resources.Load<GameObject>("Card"), new Vector3(-14 + (i * 7), 0, 0), Quaternion.identity).GetComponent<CardObject>();
 			newCard.InitialiseCard(CardManager.Controller.GetRandomCard());
 			newCard.transform.parent = CardHolder.transform;
 		}
@@ -24,6 +24,7 @@ public class MainController : MonoBehaviour {
 
 	private void Update()
 	{
+		//TEMP - Refresh hand with random cards
 		if(Input.GetKeyDown(KeyCode.P))
 		{
 			Start();
