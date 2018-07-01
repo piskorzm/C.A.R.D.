@@ -23,6 +23,6 @@ public class Minion
 
     public void AttackPlayer(Player targetPlayer)
     {
-        targetPlayer.CurrentHealth -= Attack;
+		targetPlayer.TakeDamage(Attack);
     }
 }

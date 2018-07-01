@@ -9,7 +9,7 @@ public class Player {
     public int ID { get; private set; }
     public string Name { get; private set; }
     public int MaxHealth { get; private set; }
-    public int CurrentHealth { get; public set; }
+    public int CurrentHealth { get; private set; }
 
     private Deck _deck;
     private List<Card> _hand;
@@ -17,7 +17,7 @@ public class Player {
     private Field OpponentsField;
 
     /// <summary>
-    /// Player class constructor. Draws starting cards to _hand.
+    /// Player class constructor. Draws starting cards to <see cref="_hand"/>
     /// </summary>
     /// <param name="id">Player ID</param>
     /// <param name="name">Player name</param>
@@ -42,7 +42,7 @@ public class Player {
     }
 
     /// <summary>
-    /// Passes the reference to player'ss field and the opponent's field
+    /// Passes the reference to player's field and the opponent's field
     /// </summary>
     /// <param name="own">Players field</param>
     /// <param name="opponents">Opponents field</param>
@@ -56,7 +56,7 @@ public class Player {
 	{
         if(card.GetType() == typeof(MinionCard))
         {
-            OwnField.PlaceMinion(card);
+            OwnField.PlaceMinion((MinionCard)card);
         }
         else if(card.GetType() == typeof(SpellCard))
         {
@@ -64,5 +64,15 @@ public class Player {
         }
 
         _hand.Remove(card);
+	}
+
+	/// <summary>
+	/// Inflicts an amount of damage on this player
+	/// </summary>
+	/// <param name="amount">The amount of damage to inflict</param>
+	public void TakeDamage(int amount)
+	{
+		//Take damage equal to amount, cap at 0
+		CurrentHealth = Mathf.Max(CurrentHealth - amount, 0);
 	}
 }
