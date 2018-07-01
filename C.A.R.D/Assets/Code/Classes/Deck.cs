@@ -50,4 +50,9 @@ public class Deck {
             return true;
         }
     }
+
+    public int CardsLeft
+    {
+        get { return _cards.Count; }
+    }
 }
