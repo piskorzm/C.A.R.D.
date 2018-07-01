@@ -9,11 +9,12 @@ public class Player {
     public int ID { get; private set; }
     public string Name { get; private set; }
     public int MaxHealth { get; private set; }
-    public int Health { get; private set; }
+    public int CurrentHealth { get; public set; }
 
     private Deck _deck;
     private List<Card> _hand;
-	private GameBoard _gameBoard;
+    private Field OwnField;
+    private Field OpponentsField;
 
     /// <summary>
     /// Player class constructor. Draws starting cards to _hand.
@@ -27,7 +28,7 @@ public class Player {
         ID = id;
         Name = name;
         MaxHealth = health;
-        Health = health;
+        CurrentHealth = health;
         _deck = deck;
 
         //Initialise hand
@@ -40,13 +41,28 @@ public class Player {
         }
     }
 
-	public void SetBoard(GameBoard b)
+    /// <summary>
+    /// Passes the reference to player'ss field and the opponent's field
+    /// </summary>
+    /// <param name="own">Players field</param>
+    /// <param name="opponents">Opponents field</param>
+	public void SetFields(Field own, Field opponents)
 	{
-		_gameBoard = b;
+        OwnField = own;
+        OpponentsField = opponents;
 	}
 
 	private void PlayCard(Card card)
 	{
+        if(card.GetType() == typeof(MinionCard))
+        {
+            OwnField.PlaceMinion(card);
+        }
+        else if(card.GetType() == typeof(SpellCard))
+        {
 
+        }
+
+        _hand.Remove(card);
 	}
 }
