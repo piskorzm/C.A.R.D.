@@ -19,4 +19,23 @@ public abstract class Card {
         Cost = cost;
         ImagePath = imagePath;
     }
+
+	public override bool Equals(object obj)
+	{
+		//Return false if the other object is not a Card
+		if (obj.GetType() != typeof(Card))
+		{
+			return false;
+		}
+		else
+		{
+			//If the IDs of both cards are equal, then return true, otherwise return false
+			return ((Card)obj).Id == Id;
+		}
+	}
+
+	public override int GetHashCode()
+	{
+		return Id;
+	}
 }

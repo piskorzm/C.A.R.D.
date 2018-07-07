@@ -18,7 +18,6 @@ public class PlayerTest {
 	private int id = 1;
 	private string name = "The Destroyer";
 	private int health = 100;
-	private Deck deck = new Deck(cards);
 
 	[SetUp]
 	public void SetupTest()
@@ -41,9 +40,16 @@ public class PlayerTest {
         Assert.AreEqual(name, player.Name);
         Assert.AreEqual(health, player.MaxHealth);
         Assert.AreEqual(health, player.CurrentHealth);
-        Assert.AreNotEqual(deck, player.Deck);
+
+		//Ensure that the deck is empty as a result of drawing
+        Assert.AreEqual(new Deck(), player.Deck);
         Assert.AreEqual(0, player.Deck.CardsLeft);
+
+		//Ensure that the player now has 2 different cards in their hand
         Assert.AreEqual(2, player.Hand.Count);
+		Card c1 = player.Hand[0];
+		Card c2 = player.Hand[1];
+		Assert.AreNotEqual(c1, c2);
     }
 
     [Test]

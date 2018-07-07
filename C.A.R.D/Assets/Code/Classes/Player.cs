@@ -37,7 +37,7 @@ public class Player : Entity
             Card cardToDraw = Deck.Draw();
             if (cardToDraw != null)
             {
-                Hand.Add(Deck.Draw());
+                Hand.Add(cardToDraw);
             }
 		}
 	}
