@@ -30,6 +30,7 @@ public class PlayerTest {
 
 		//Create a player
 		player = new Player(id, name, health, deck);
+		player.SetFields(new Field(), new Field());
 	}
 
     [Test]
@@ -68,7 +69,7 @@ public class PlayerTest {
         player.PlayCard(minionTestCard);
 
         //Check if the hand cound has been decremented
-        Assert.AreEqual(1, player.Hand.Count);
+        Assert.AreEqual(0, player.Hand.Count);
 
         //Check if the field contains a minion
         Assert.AreEqual(1, player.OwnField.Minions.Count);
