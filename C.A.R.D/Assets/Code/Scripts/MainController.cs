@@ -39,19 +39,25 @@ public class MainController : MonoBehaviour
 		Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 
-		//D
-		if (Input.GetMouseButtonDown(0) && SelectedCard != null)
+		//Enable dragmode if the user has pressed the left mouse button whilst selecting a card
+		if (!dragMode && (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && SelectedCard != null)
 		{
 			dragMode = true;
+
+			//Stop any tweens on the current card
+			iTween.Stop(SelectedCard.gameObject);
 		}
 
-		//D
+		//Move selected card towards mouse position if drag mode is enabled
 		if (dragMode)
 		{
-			Vector3 newCardPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			newCardPos.y = 0;
-			SelectedCard.transform.position = newCardPos;
+			//Use the mouse position to determine where the card should be
+			//TODO: More accurate mouse to world position via ray/plane intersecting
+			Vector3 newCardPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 30));
+			newCardPos.y = 5;
+			SelectedCard.transform.position = Vector3.Lerp(SelectedCard.transform.position, newCardPos, 0.1f);
 
+			//If the user releases the mouse
 			if (Input.GetMouseButtonUp(0) || !Input.GetMouseButton(0))
 			{
 				dragMode = false;
