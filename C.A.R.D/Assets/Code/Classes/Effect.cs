@@ -27,7 +27,7 @@
 		return a.Equals(b);
 	}
 
-	public static bool operator !=(Effect a, Effect b)
+	public static bool operator != (Effect a, Effect b)
 	{
 		return !a.Equals(b);
 	}

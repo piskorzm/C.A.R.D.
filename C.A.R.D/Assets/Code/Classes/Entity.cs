@@ -24,4 +24,13 @@ public abstract class Entity {
 		//Take damage equal to amount, cap at 0
 		CurrentHealth = Mathf.Max(CurrentHealth - amount, 0);
 	}
+
+    /// <summary>
+    /// Inflicts an amount of heal to this entity
+    /// </summary>
+    /// <param name="amount">The heal amount</param>
+    public void Heal(int amount)
+    {
+        CurrentHealth = Mathf.Min(CurrentHealth + amount, MaxHealth);
+    }
 }
