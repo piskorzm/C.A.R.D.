@@ -5,7 +5,8 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
 
-	public GameObject CardHolder;
+	public GameObject PlayerCardHolder;
+	public GameObject OpponentCardHolder;
 
 	public CardObject SelectedCard;
 
@@ -13,26 +14,32 @@ public class MainController : MonoBehaviour
 
 	void Start()
 	{
-		//Destroy all active cards
-		for (int i = 0; i < CardHolder.transform.childCount; i++)
+		//Destroy all active player cards
+		for (int i = 0; i < PlayerCardHolder.transform.childCount; i++)
 		{
-			Destroy(CardHolder.transform.GetChild(i).gameObject);
+			Destroy(PlayerCardHolder.transform.GetChild(i).gameObject);
+		}
+
+		//Destroy all active opponent cards
+		for (int i = 0; i < OpponentCardHolder.transform.childCount; i++)
+		{
+			Destroy(OpponentCardHolder.transform.GetChild(i).gameObject);
 		}
 
 		//Create players hand
-		for(int i = 0; i < 5; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			CardObject newCard = Instantiate(Resources.Load<GameObject>("Card"), new Vector3(-14 + (i * 7), 0, 0), Quaternion.identity).GetComponent<CardObject>();
 			newCard.InitialiseCard(CardManager.Controller.GetRandomCard());
-			newCard.transform.parent = CardHolder.transform;
+			newCard.transform.parent = PlayerCardHolder.transform;
 		}
 
         //Create opponent hand
         for(int i = 0; i < 5; i++)
         {
-            CardObject newCard = Instantiate(Resources.Load<GameObject>("Card"), new Vector3(-14 + (i * 7), -5, 18), Quaternion.identity).GetComponent<CardObject>();
+            CardObject newCard = Instantiate(Resources.Load<GameObject>("Card"), new Vector3(-14 + (i * 7), 0, 18), Quaternion.identity).GetComponent<CardObject>();
             newCard.transform.Rotate(Vector3.right * 180);
-            newCard.transform.parent = CardHolder.transform;
+            newCard.transform.parent = OpponentCardHolder.transform;
         }
     }
 

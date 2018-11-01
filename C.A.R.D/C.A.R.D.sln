@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.A.R.D", "GameAssembly.csproj", "{05052E4E-DF04-D131-E57A-9403BE8ACB17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAssembly", "GameAssembly.csproj", "{05052E4E-DF04-D131-E57A-9403BE8ACB17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.A.R.D", "Plugins.csproj", "{4412309A-F0C3-1075-9E5B-A89AA720509B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins", "Plugins.csproj", "{4412309A-F0C3-1075-9E5B-A89AA720509B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.A.R.D", "Tests.csproj", "{03CAA52B-FA90-59AF-54A8-FE9765DA409A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{03CAA52B-FA90-59AF-54A8-FE9765DA409A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
