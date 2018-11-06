@@ -5,4 +5,4 @@ install:
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=CI C.A.R.D/C.A.R.D.sln
-  - mono testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe Temp/bin/Debug/Tests.dll
+  - mono testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe C.A.R.D/Temp/bin/Debug/Tests.dll
