@@ -1,7 +1,7 @@
 # Blender v2.70 (sub 0) OBJ File: 'Card.blend'
 # www.blender.org
 mtllib CardGems.mtl
-o CardGems_Cube.002
+o Gems_Cube.002
 v 0.603708 -0.813600 0.464263
 v 0.000000 -0.813600 0.549105
 v 0.130000 -0.813600 0.378965

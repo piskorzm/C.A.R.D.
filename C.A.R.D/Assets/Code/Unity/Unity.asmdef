@@ -1,0 +1,11 @@
+{
+    "name": "Unity",
+    "references": [
+        "Core",
+        "Plugins"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
