@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameAssembly", "GameAssembly.csproj", "{05052E4E-DF04-D131-E57A-9403BE8ACB17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core.csproj", "{9FDFF65F-C1E5-2F00-FE9D-002F6DF0EC9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins", "Plugins.csproj", "{4412309A-F0C3-1075-9E5B-A89AA720509B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity", "Unity.csproj", "{B420D3AA-57FF-00C3-61C7-2975EFEEF4BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{03CAA52B-FA90-59AF-54A8-FE9765DA409A}"
 EndProject
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05052E4E-DF04-D131-E57A-9403BE8ACB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05052E4E-DF04-D131-E57A-9403BE8ACB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05052E4E-DF04-D131-E57A-9403BE8ACB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05052E4E-DF04-D131-E57A-9403BE8ACB17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FDFF65F-C1E5-2F00-FE9D-002F6DF0EC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FDFF65F-C1E5-2F00-FE9D-002F6DF0EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FDFF65F-C1E5-2F00-FE9D-002F6DF0EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FDFF65F-C1E5-2F00-FE9D-002F6DF0EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4412309A-F0C3-1075-9E5B-A89AA720509B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4412309A-F0C3-1075-9E5B-A89AA720509B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4412309A-F0C3-1075-9E5B-A89AA720509B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4412309A-F0C3-1075-9E5B-A89AA720509B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B420D3AA-57FF-00C3-61C7-2975EFEEF4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B420D3AA-57FF-00C3-61C7-2975EFEEF4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B420D3AA-57FF-00C3-61C7-2975EFEEF4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B420D3AA-57FF-00C3-61C7-2975EFEEF4BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03CAA52B-FA90-59AF-54A8-FE9765DA409A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03CAA52B-FA90-59AF-54A8-FE9765DA409A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03CAA52B-FA90-59AF-54A8-FE9765DA409A}.Release|Any CPU.ActiveCfg = Release|Any CPU
