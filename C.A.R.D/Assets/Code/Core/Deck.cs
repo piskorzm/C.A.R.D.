@@ -4,7 +4,7 @@ public class Deck
 {
 	public const int MAX_CARDS = 10;
 
-	private List<Card> _cards;
+	protected List<Card> _cards;
 
 	public Deck() : this(new List<Card>()) { }
 
@@ -72,6 +72,10 @@ public class Deck
 		}
 	}
 
+    /// <summary>
+    /// Gets the sum of the card IDs in the deck, as the result giving a unique ID for the deck, given they all have the sasme number of cards.
+    /// </summary>
+    /// <returns>int IDSum</returns>
 	public override int GetHashCode()
 	{
 		int IDSum = 0;
@@ -84,6 +88,9 @@ public class Deck
 		return IDSum;
 	}
 
+    /// <summary>
+    /// Gets the number of cards left in the deck
+    /// </summary>
 	public int CardsLeft
 	{
 		get { return _cards.Count; }
