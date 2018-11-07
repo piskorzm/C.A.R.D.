@@ -1,7 +1,7 @@
 language: csharp
-solution: C.A.R.D/C.A.R.D.sln
+solution: C.A.R.D.sln
 install:
-  - nuget restore C.A.R.D/C.A.R.D.sln
+  - nuget restore C.A.R.D.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=CI C.A.R.D/C.A.R.D.sln
