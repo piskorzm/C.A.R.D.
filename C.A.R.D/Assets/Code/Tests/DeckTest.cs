@@ -7,8 +7,8 @@ using System.Reflection;
 
 public class DeckTest {
 
-    MinionCard card1 = new MinionCard(0,"name", Rarity.UNCOMMON, "description", 1, "imagePath", 1, 1);
-    SpellCard card2 = new SpellCard(1, "name", Rarity.RARE, "description", 2, "imagePath", new Effect(TargetType.OPPONENT, 1));
+    MinionCard card1 = new MinionCard(0, "minion card", Rarity.UNCOMMON, "description", 1, "imagePath", 1, 1);
+    SpellCard card2 = new SpellCard(1, "spell card", Rarity.RARE, "description", 2, "imagePath", new Effect(TargetType.OPPONENT, 1));
 
     [Test]
     public void CreateEmptyDeckTest()
@@ -76,14 +76,55 @@ public class DeckTest {
 
         Deck deck = new Deck(cards);
 
+        while (GetCardsFromDeck(deck)[0] != card1)
+        {
+            deck.Shuffle();
+        }
+
         Card drawnCard = deck.Draw();
 
         Assert.AreEqual(cards.Count - 1, deck.CardsLeft);
         Assert.AreEqual(card1, drawnCard);
     }
 
+    [Test]
+    public void DeckEqualTest()
+    {
+        List<Card> cards1 = new List<Card>();
+        cards1.Add(card1);
+        cards1.Add(card2);
+
+        List<Card> cards2 = new List<Card>();
+        cards2.Add(card1);
+        cards2.Add(card2);
+
+        Deck deck1 = new Deck(cards1);
+        Deck deck2 = new Deck(cards2);
+        Deck emptyDeck = new Deck();
+        Card nonDeckTypeObject = card1;
+
+
+        Assert.IsFalse(deck1.Equals(nonDeckTypeObject));
+        Assert.IsFalse(deck1.Equals(emptyDeck));
+
+        while (GetCardsFromDeck(deck1)[0] != GetCardsFromDeck(deck2)[0])
+        {
+            deck1.Shuffle();
+        }
+
+        Assert.IsTrue(deck1.Equals(deck2));
+
+        while (GetCardsFromDeck(deck1)[0] == GetCardsFromDeck(deck2)[0])
+        {
+            deck1.Shuffle();
+        }
+
+        Assert.IsFalse(deck1.Equals(deck2));
+    }
+
     public List<Card> GetCardsFromDeck (Deck deck)
     {
         return (List<Card>)typeof(Deck).GetField("_cards", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(deck);
     }
+
 }

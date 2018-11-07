@@ -73,7 +73,7 @@ public class Deck
 	}
 
     /// <summary>
-    /// Gets the sum of the card IDs in the deck, as the result giving a unique ID for the deck, given they all have the sasme number of cards.
+    /// Gets the sum of the card IDs in the deck, as the result giving a unique ID for the deck, given they all have the same number of cards.
     /// </summary>
     /// <returns>int IDSum</returns>
 	public override int GetHashCode()
