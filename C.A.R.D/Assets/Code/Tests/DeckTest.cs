@@ -80,12 +80,12 @@ public class DeckTest {
 
         Card drawnCard = deck.Draw();
 
-        Assert.Equals(cards.Count - 1, deck.CardsLeft);
+        Assert.AreEqual(cards.Count - 1, deck.CardsLeft);
         Assert.AreEqual(card1, drawnCard);
     }
 
     public List<Card> GetCardsFromDeck (Deck deck)
     {
-        return (List<Card>) typeof(Card).GetField("_cards", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(deck);
+        return (List<Card>)typeof(Deck).GetField("_cards", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(deck);
     }
 }
