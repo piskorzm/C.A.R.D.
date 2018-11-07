@@ -41,8 +41,6 @@ public class DeckTest {
 
         Deck deck = new Deck(cards);
 
-        Assert.AreEqual(card1, GetCardsFromDeck(deck)[0]);
-
         bool deckShuffeled = false;
         int checkLimit = 100;
 

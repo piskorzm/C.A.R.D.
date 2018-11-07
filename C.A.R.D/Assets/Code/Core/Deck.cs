@@ -10,7 +10,7 @@ public class Deck
 
 	public Deck(List<Card> cards)
 	{
-		_cards = cards;
+		_cards = new List<Card>(cards);
 		Shuffle();
 	}
 
@@ -37,7 +37,7 @@ public class Deck
 	/// </summary>
 	public void Shuffle()
 	{
-		_cards.Shuffle();
+		_cards = (List<Card>)_cards.Shuffle();
 	}
 
 	public override bool Equals(object obj)

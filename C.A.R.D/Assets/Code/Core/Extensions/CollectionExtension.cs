@@ -6,7 +6,7 @@ public static class CollectionExtension
 {
 	public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source)
 	{
-		return source.OrderBy(x => Guid.NewGuid());
+		return source.OrderBy(x => Guid.NewGuid()).ToList();
 	}
 
 	public static IEnumerable<T> PickRandom<T>(this IEnumerable<T> source, int count)
