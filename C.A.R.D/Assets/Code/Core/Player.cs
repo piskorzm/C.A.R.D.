@@ -23,10 +23,12 @@ public class Player : Entity
 	/// <param name="name">Player name</param>
 	/// <param name="health">Initial health</param>
 	/// <param name="deck">Deck to use</param>
-	public Player(int id, string name, int health, Deck deck, ) : base(health, health, 0)
+	public Player(int id, string name, int health, Deck deck, int maxMana) : base(health, health, 0)
 	{
 		Id = id;
 		Name = name;
+        MaxMana = maxMana;
+        CurrentMana = 0;
 
 		Deck = deck;
 
@@ -66,6 +68,12 @@ public class Player : Entity
 
 		}
 
-		Hand.Remove(card);
+        CurrentMana -= card.Cost;
+        Hand.Remove(card);
 	}
+
+    public void RefilMana()
+    {
+        CurrentMana = MaxMana;
+    }
 }
