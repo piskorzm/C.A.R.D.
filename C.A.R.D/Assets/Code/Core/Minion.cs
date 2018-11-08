@@ -13,5 +13,6 @@ public class Minion : Entity
     public void AttackEntity(Entity target)
     {
 		target.TakeDamage(Attack);
+        TakeDamage(target.Attack);
     }
 }

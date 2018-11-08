@@ -8,8 +8,10 @@ public class Player : Entity
 
 	public int Id { get; private set; }
 	public string Name { get; private set; }
+    public int MaxMana { get; private set; }
+    public int CurrentMana { get; private set; }
 
-	public Deck Deck;
+    public Deck Deck;
 	public List<Card> Hand;
 	public Field OwnField;
 	public Field OpponentsField;
@@ -21,7 +23,7 @@ public class Player : Entity
 	/// <param name="name">Player name</param>
 	/// <param name="health">Initial health</param>
 	/// <param name="deck">Deck to use</param>
-	public Player(int id, string name, int health, Deck deck) : base(health, health, 0)
+	public Player(int id, string name, int health, Deck deck, ) : base(health, health, 0)
 	{
 		Id = id;
 		Name = name;

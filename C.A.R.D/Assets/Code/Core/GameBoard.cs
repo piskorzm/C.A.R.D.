@@ -17,4 +17,23 @@
 		Player1.SetFields(Field1,Field2);
 		Player2.SetFields(Field2,Field1);
     }
+
+    public Player DeadPlayer()
+    {
+        if (Player1.IsDead())
+        {
+            return Player1;
+        }
+        else if (Player2.IsDead())
+        {
+            return Player2;
+        }
+        else return null;
+    }
+
+    public void RemoveDeadMinions()
+    {
+        Field1.RemoveDeadMinions();
+        Field2.RemoveDeadMinions();
+    }
 }

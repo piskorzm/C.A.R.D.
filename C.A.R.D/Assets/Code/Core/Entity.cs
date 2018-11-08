@@ -33,4 +33,11 @@ public abstract class Entity {
     {
         CurrentHealth = Mathf.Min(CurrentHealth + amount, MaxHealth);
     }
+
+    public bool IsDead()
+    {
+        return CurrentHealth <= 0;
+    }
+
+    public abstract void Destroy();
 }

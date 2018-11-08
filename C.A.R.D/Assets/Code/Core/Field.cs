@@ -59,4 +59,15 @@ public class Field
 			return Minions.Count;
 		}
 	}
+
+    public void RemoveDeadMinions()
+    {
+        foreach (Minion minion in Minions)
+        {
+            if (minion.IsDead())
+            {
+                Minions.Remove(minion);
+            }
+        }
+    }
 }
